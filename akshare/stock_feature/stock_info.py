@@ -99,14 +99,12 @@ def stock_info_global_sina() -> pd.DataFrame:
     """
     url = "https://zhibo.sina.com.cn/api/zhibo/feed"
     params = {
-        "page": "1",
-        "page_size": "20",
+        "page": "4",
+        "page_size": "50",
         "zhibo_id": "152",
         "tag_id": "0",
         "dire": "f",
         "dpc": "1",
-        "pagesize": "20",
-        "type": "1",
     }
     r = requests.get(url, params=params)
     data_json = r.json()
